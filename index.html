@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Musallah-E-Talaba — A community of students devoted to establishing salah, seeking sacred knowledge, and preserving iman with sincerity and brotherhood." />
+  <meta name="theme-color" content="#F4C430" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <title>Musallah-E-Talaba | A Journey of Faith and Brotherhood</title>
+
+  <!-- Favicons -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/styles.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/landing.css" />
+  <link rel="stylesheet" href="/src/css/admin.css" />
+  <link rel="stylesheet" href="/src/css/financial.css" />
+  <link rel="stylesheet" href="/src/css/khidmat.css" />
+  <link rel="stylesheet" href="/src/css/responsive.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6X1XE0FH4Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6X1XE0FH4Q');
+  </script>
+
+</head>
+
+<body>
+  <!-- App Root -->
+  <div id="app">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <span class="logo-icon">🌙</span>
+          <span class="logo-text">Musallah-E-Talaba</span>
+        </div>
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+        </div>
+        <p class="loading-text">Loading...</p>
+      </div>
+    </div>
+
+    <!-- Main Content Container (pages render here) -->
+    <div id="page-container"></div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay hidden"></div>
+
+  <!-- Entry Point -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

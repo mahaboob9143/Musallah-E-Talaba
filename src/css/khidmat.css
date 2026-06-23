@@ -1,0 +1,234 @@
+/* ============================================================
+   KHIDMAT TEAM DASHBOARD — Specific Styles
+   ============================================================ */
+
+/* Attendance Entry */
+.attendance-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.attendance-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-4);
+}
+
+.attendance-input-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    text-align: center;
+}
+
+.attendance-input-card .att-label {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
+}
+
+.attendance-input-card .att-input {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    background: transparent;
+    color: var(--gold);
+    border: none;
+    border-bottom: 2px solid var(--border-color-light);
+    padding: var(--space-2);
+}
+
+.attendance-input-card .att-input:focus {
+    border-bottom-color: var(--gold);
+}
+
+/* Checklist */
+.checklist-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.checklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-5);
+    border-bottom: 1px solid var(--border-color);
+    transition: background var(--transition-fast);
+}
+
+.checklist-item:hover {
+    background: var(--bg-card-hover);
+}
+
+.checklist-item:last-child {
+    border-bottom: none;
+}
+
+.checklist-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color-light);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+    background: transparent;
+    color: transparent;
+    font-size: 0.7rem;
+}
+
+.checklist-checkbox.checked {
+    background: var(--success);
+    border-color: var(--success);
+    color: white;
+}
+
+.checklist-checkbox.unavailable {
+    background: var(--error);
+    border-color: var(--error);
+    color: white;
+}
+
+.checklist-info {
+    flex: 1;
+}
+
+.checklist-name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.checklist-qty {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+}
+
+.checklist-status {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+.checklist-status.available {
+    background: var(--success-bg);
+    color: var(--success);
+}
+
+.checklist-status.unavailable {
+    background: var(--error-bg);
+    color: var(--error);
+}
+
+/* Calendar View */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-header-cell {
+    text-align: center;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--text-tertiary);
+    padding: var(--space-2);
+}
+
+.calendar-cell {
+    aspect-ratio: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2);
+    font-size: var(--text-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.calendar-cell:hover {
+    border-color: var(--gold);
+}
+
+.calendar-cell.today {
+    border-color: var(--gold);
+    background: var(--gold-glow);
+}
+
+.calendar-cell.has-data {
+    background: var(--success-bg);
+}
+
+.calendar-cell .cell-date {
+    font-weight: 600;
+}
+
+.calendar-cell .cell-count {
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* Inventory Status */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.inventory-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.inventory-status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.inventory-status-dot.available {
+    background: var(--success);
+}
+
+.inventory-status-dot.unavailable {
+    background: var(--error);
+}
+
+.inventory-name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.inventory-qty {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+}

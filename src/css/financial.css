@@ -1,0 +1,266 @@
+/* ============================================================
+   FINANCIAL TEAM DASHBOARD — Specific Styles
+   ============================================================ */
+
+.verification-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-5);
+    margin-bottom: var(--space-4);
+    transition: all var(--transition-base);
+}
+
+.verification-card:hover {
+    border-color: var(--border-color-light);
+}
+
+.verification-receipt {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-tertiary);
+    cursor: pointer;
+}
+
+.verification-receipt img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verification-info {
+    min-width: 0;
+}
+
+.verification-name {
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.verification-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+}
+
+.verification-zone {
+    font-size: var(--text-xs);
+    color: var(--gold);
+    margin-top: var(--space-1);
+}
+
+.verification-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-self: center;
+}
+
+/* Transaction Entry */
+.transaction-entry {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-entry:hover {
+    background: var(--bg-card-hover);
+}
+
+.transaction-type-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-type-icon.add {
+    background: var(--success-bg);
+    color: var(--success);
+}
+
+.transaction-type-icon.deduct {
+    background: var(--error-bg);
+    color: var(--error);
+}
+
+.transaction-details {
+    flex: 1;
+}
+
+.transaction-desc {
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.transaction-sub {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+}
+
+.transaction-amount {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 700;
+}
+
+.transaction-amount.positive {
+    color: var(--success);
+}
+
+.transaction-amount.negative {
+    color: var(--error);
+}
+
+.transaction-balance {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+    text-align: right;
+}
+
+/* Budget Planning */
+.budget-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+}
+
+.budget-category {
+    font-weight: 600;
+}
+
+.budget-amounts {
+    display: flex;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+}
+
+.budget-progress {
+    height: 10px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.budget-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.6s ease;
+}
+
+.budget-fill.safe {
+    background: var(--success);
+}
+
+.budget-fill.warning {
+    background: var(--warning);
+}
+
+.budget-fill.danger {
+    background: var(--error);
+}
+
+/* Financial Summary */
+.financial-summary {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.summary-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.summary-side .summary-card {
+    flex: 1;
+}
+
+.summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.summary-card.income::after {
+    background: var(--success);
+}
+
+.summary-card.expense::after {
+    background: var(--error);
+}
+
+.summary-card.balance::after {
+    background: var(--gold);
+}
+
+.summary-label {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
+}
+
+.summary-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+}
+
+.summary-breakdown {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-color);
+}
+
+.breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    font-size: var(--text-xs);
+}
+
+.breakdown-label {
+    color: var(--text-secondary);
+}
+
+.breakdown-amount {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: var(--font-heading);
+}

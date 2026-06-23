@@ -1,0 +1,26 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Receipts: anyone can upload (for form submissions), team can read
+    match /receipts/{fileName} {
+      allow read: if request.auth != null;
+      allow create: if request.resource.size < 5 * 1024 * 1024
+                    && request.resource.contentType.matches('image/.*|application/pdf');
+    }
+
+    // Gallery: only admin can upload, anyone can view
+    match /gallery/{fileName} {
+      allow read: if true;
+      allow create, delete: if request.auth != null
+                            && 'admin' in firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role;
+    }
+
+    // Year photos: only admin can upload, anyone can view
+    match /years/{year}/{fileName} {
+      allow read: if true;
+      allow create, delete: if request.auth != null
+                            && 'admin' in firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role;
+    }
+  }
+}
